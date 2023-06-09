@@ -1,0 +1,136 @@
+body{
+    text-align: center;
+}
+
+/*------Title-------*/
+#titleText{
+    display: none;
+}
+.welcome{
+    color: rgb(18, 97, 18);
+    margin-top: 35%;
+    transition: margin-top 5s;
+    font-size: 25px;
+    transition: font-size 5s;
+    display: block;
+}
+.title{
+    font-size: 20px;
+    transition: font-size 5s;
+    color: rgb(57, 123, 57);
+    text-shadow: 0, 0, 50%, black;
+    width: 100%;
+}
+/*------TITLE END-------*/
+/*------COUNTER/BOTTLES-------*/
+.bottleText{
+    position: absolute;
+    display: flex;
+    margin-top: 100px;
+    z-index: 90;
+    font-weight: bolder;
+    color: white;
+}
+.broken{
+    display: none;
+    position: absolute;
+}
+.wallDiv{
+    display: none;
+    margin-left: 500px;
+    margin-top: -70px;
+    justify-content: center;
+    z-index: 80;
+}
+.wall{
+    display: none;
+}
+/*------COUNTER/BOTTLES END-------*/
+/*------BUTTONS-------*/
+.btn{
+    color:rgb(57, 123, 57);
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 5%;
+    font-weight: bolder;
+}
+
+footer{
+    display: none;
+    visibility: hidden;
+}
+.buttons{
+    margin-left: 200px;
+    display: none;
+    
+}
+.rules{
+    display: none;
+    margin-top: 120px;
+    margin-left: 75px;
+}
+.xBtn{
+    display: block;
+    border: none;
+    font-weight: bolder;
+    right: 0;
+    position: absolute;
+    margin-top: -15px;
+}
+ul{
+    margin-top: -15px;
+    text-align: left;
+}
+ /*------BUTTONS END-------*/
+ /*------DICE-------*/
+.dice{
+    display: none;
+}
+.dice1{
+    display: none;
+}
+.dice2{
+    display: none;
+}
+.dice3{
+    display: none;
+}
+.dice4{
+    display: none;
+}
+.dice5{
+    display: none;
+}
+.dice6{
+    display: none;
+}
+.diceImg{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+}
+ /*------DICE END-------*/
+ /*------WINNER-------*/
+.overlay{
+    display: none;
+    background-color: rgb(57, 123, 57);
+    color: white;
+    z-index: 99;
+}
+.playAgainBtn{
+    color:rgb(57, 123, 57);
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 5%;
+}
+
+ /*------WINNER END-------*/
+/*------FOOTER-------*/
+footer{
+    display: none;
+    visibility: hidden;
+}
