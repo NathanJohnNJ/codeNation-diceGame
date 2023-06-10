@@ -73,15 +73,9 @@ rollBtn.addEventListener("click", () => {
     (num == 1)?rolled(dice1, 1):(num == 2)?rolled(dice2, 2):(num == 3)?rolled(dice3, 3):(num == 4)?rolled(dice4, 4):(num == 5)?rolled(dice5, 5):rolled(dice6, 6);
 });
 
-// resetBtn.addEventListener("click", () => {
-//     console.log("Reset button hit")
-//     points = 0;
-//     bottleText.innerHTML = `There are ${points} green bottles standing on the wall.`;
-//     console.log("Updated wall text");
-
-//     console.log("Removed bottles")
-
-// });
+resetBtn.addEventListener("click", () => {
+    location.reload();
+});
 playAgainBtn.addEventListener("click", () => {
     location.reload();
 });
@@ -123,19 +117,22 @@ function addBottles(amount){
         if(num == 1){
             bottle.src = "./images/bottle1.PNG";
             bottle.height = 80;
+            var topMargin = "10px";
         } else if(num == 2) {
             bottle.src = "./images/bottle2.PNG";
             bottle.height = 60;
+            var topMargin = "30px";
         } else {
             bottle.src = "./images/bottle3.PNG";
             bottle.height = 75;
+            var topMargin = "15px";
         };
         var newBottle = wallDiv.appendChild(bottle);
         newBottle.style.position = "absolute";
         newBottle.style.right = "0";
-        let marg = 100 + i*20
+        let marg = 65 + i*20
         newBottle.style.marginRight = `${marg}px`;
-        newBottle.style.marginTop = "10px";
+        newBottle.style.marginTop = topMargin;
         console.log(`Bottle ${i} created.`)
     }
 }
