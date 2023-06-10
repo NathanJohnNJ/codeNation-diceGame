@@ -1,5 +1,5 @@
 // const timeOut = 5000;
-const timeOut = 5000;
+const timeOut = 6000;
 
 //opening/title
 const welcome = document.getElementById("welcome");
@@ -18,7 +18,7 @@ const bottle3 = document.getElementById("bottle3");
 const broken = document.getElementById("broken");
 const bottles = [bottle1, bottle2, bottle3];
 const bottleText = document.getElementById("bottleText");
-
+let totalBottles = 0;
 //game variables
 const mainGame = document.getElementById("mainGame");
 const buttons = document.getElementById("buttons");
@@ -31,7 +31,6 @@ let points = 0;
 
 //dice variables
 const allDice  = document.getElementById("dice");
-const rolling = document.getElementById("rolling");
 const dice1 = document.getElementById("dice1");
 const dice2 = document.getElementById("dice2");
 const dice3 = document.getElementById("dice3");
@@ -67,8 +66,7 @@ function initial(){
 
 //event listeners for buttons
 rollBtn.addEventListener("click", () => {
-    rolling.style.display = "flex";
-    setTimeout(() => {rolling.style.display = "none"}, 3000);
+    broken.style.display = "none";
     let num = Math.floor(Math.random() * 6 +1);
     (num == 1)?rolled(dice1, 1):(num == 2)?rolled(dice2, 2):(num == 3)?rolled(dice3, 3):(num == 4)?rolled(dice4, 4):(num == 5)?rolled(dice5, 5):rolled(dice6, 6);
 });
@@ -89,54 +87,58 @@ xBtn.addEventListener("click", () =>{
 
 //functions
 function rolled(dice, num){
+    allDice.style.display = "block";
+    dice.style.display = "block";
     if(num == 1){
         console.log("rolled 1");
-        allDice.style.display = "block";
-        dice.style.display = "block";
         points = 0;
-        broken.style.display = "flex";
-        setTimeout(() => {dice.style.display = "none"}, timeOut);
+        setTimeout(() => {broken.style.display = "flex"; bottleText.innerHTML = `...And if 1 green bottle should accidentally fall, THEY ALL FALL`}, 3200);
     } else {
-        console.log(`rolled ${num}`);
-        allDice.style.display = "block";
-        dice.style.display = "block";
+        setTimeout(() => {showBottles(num)}, 3200);
+    }
+    setTimeout(() => {bottleText.innerHTML = `There are ${points} green bottles standing on the wall. And if 1 green bottle should accidentally fall...`;
+    console.log("Updated wall text")}, 3200);
+    setTimeout(() => {dice.style.display = "none"}, timeOut);
+}
+function showBottles(num){
+    console.log(`rolled ${num}`);
         points = points + num;
         console.log(points);
-        (points >= 20)?winner():addBottles(points);
-        setTimeout(() => {dice.style.display = "none"}, timeOut);
-    }
-    bottleText.innerHTML = `There are ${points} green bottles standing on the wall.`;
-    console.log("Updated wall text");
+        (points >= 20)?winner(points):addBottles(points);
 }
-
 function addBottles(amount){
     console.log("bottles func called");
-    for(let i = 0; i < amount; i++){
+    for(let i = 0; i < amount-totalBottles; i++){
         const bottle = new Image();
         let num = Math.floor(Math.random() * 3 +1);
         if(num == 1){
             bottle.src = "./images/bottle1.PNG";
             bottle.height = 80;
+            bottle.width = 15;
             var topMargin = "10px";
         } else if(num == 2) {
             bottle.src = "./images/bottle2.PNG";
             bottle.height = 60;
+            bottle.width = 15;
             var topMargin = "30px";
         } else {
             bottle.src = "./images/bottle3.PNG";
             bottle.height = 75;
+            bottle.width = 15;
             var topMargin = "15px";
         };
         var newBottle = wallDiv.appendChild(bottle);
         newBottle.style.position = "absolute";
         newBottle.style.right = "0";
-        let marg = 65 + i*20
+        let marg = totalBottles*10 + 45 + i*10;
         newBottle.style.marginRight = `${marg}px`;
         newBottle.style.marginTop = topMargin;
         console.log(`Bottle ${i} created.`)
     }
+    totalBottles = totalBottles + amount
 }
-function winner() {
+function winner(points) {
+    addBottles(points)
     rulesBtn.style.display = "none";
     rollBtn.style.display = "none";
     resetBtn.style.display = "none";
