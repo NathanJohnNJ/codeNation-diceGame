@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="wallDiv" id="wallDiv">
-        <p id="bottleText" class="bottleText">There are 0 green bottles standing on the wall. And if 1 green bottle should accidentally fall...</p>
+        <p id="bottleText" class="bottleText">0 green bottles standing on the wall. And if 1 green bottle should accidentally fall...</p>
         <img src="images/wall.PNG" alt="Wall" class="wall" id="wall" width="500px" height="180px">
         <img src="images/broken.PNG" alt="Broken bottles" class="broken" id="broken" width="400px" height="auto">
     </div>
@@ -45,22 +45,23 @@
                         <li>Click the button to roll the dice</li>
                         <li>Your score will be represented by how<br>many green bottles are sitting on the wall</li>
                         <li>Keep clicking, rolling, and stacking those bottles</li>
-                        <li>If you roll a 1, you will lose your points and have<br>to start again</li>
+                        <li>If you roll a 1, 1 green bottle will fall, causing<br> all the others to smash and you will have <br>to start again</li>
                         <li>You can also hit the 'Reset' button at any time<br>to start again</li>
-                        <li>Once you have reached 20 bottles...<br><center>YOU'RE A WINNER, BABY!</center></li>
+                        <li>Once you have reached 20 bottles...<br><center>...YOU'RE A WINNER, BABY!</center></li>
                     </ul>
                 </div>
         </div>
         <div class="overlay" id="winnerOverlay">
             <h1>CONDRAGULATIONS!</h1> 
             <h1>YOU ARE THE WINNER OF</h1>
-            <h1>THE GREEN BOTTLES DICE GAME</h1>
+            <h1 id="winnerTitle">THE GREEN BOTTLES DICE GAME</h1>
             <button value="Play Again?" class="playAgainBtn" id="playAgainBtn">Play Again?</button>
         </div>
     </div>
     <footer class="footer" id="footer">
         <p class="playing" id="playing">You've been playing The Green Bottle Dice Game for one player by NJCodes.</p>
-        <p class="portfolio" id="portfolio">Check out the rest of my portfolio at codes.njtd.xyz</p>
+        <p class="portfolio" id="portfolio">Check out the rest of my portfolio at <a href="codes.njtd.xyz" class="github">codes.njtd.xyz</a></p>
+        <p class="portfolio" id="portfolio">You can also see what I'm currently up to on <a href="https://github.com/NathanJohnNJ" class="github">github</a></p>
         <p class="thanks" id="thanks">Thanks for playing! See you again soon.</p>
     </footer> 
     <script src="index.js"></script>

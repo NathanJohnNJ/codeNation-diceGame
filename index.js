@@ -30,6 +30,7 @@ const xBtn  = document.getElementById("xBtn");
 let points = 0;
 
 //dice variables
+const board = document.getElementById("board");
 const allDice  = document.getElementById("dice");
 const dice1 = document.getElementById("dice1");
 const dice2 = document.getElementById("dice2");
@@ -61,6 +62,8 @@ function initial(){
     wall.style.position = "relative";
     wall.style.right = "0";
     footer.style.display = "block";
+    footer.style.visibility = "visible";
+    board.style.display = "block";
     buttons.style.display = "flex";
 }
 
@@ -96,7 +99,7 @@ function rolled(dice, num){
     } else {
         setTimeout(() => {showBottles(num)}, 3200);
     }
-    setTimeout(() => {bottleText.innerHTML = `There are ${points} green bottles standing on the wall. And if 1 green bottle should accidentally fall...`;
+    setTimeout(() => {bottleText.innerHTML = `${points} green bottles standing on the wall. And if 1 green bottle should accidentally fall...`;
     console.log("Updated wall text")}, 3200);
     setTimeout(() => {dice.style.display = "none"}, timeOut);
 }
@@ -144,4 +147,6 @@ function winner(points) {
     resetBtn.style.display = "none";
     winnerOverlay.style.display = "block";
     winnerOverlay.style.position = "absolute";
+    footer.style.marginTop = "15%";
+    // setTimeout(() => {footer.style.marginTop = "100%"}, 3000);
 }
