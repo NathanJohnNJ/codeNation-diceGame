@@ -10,7 +10,8 @@ const fullTitleText = document.getElementById("titleText");
 //scorecard
 const wallDiv = document.getElementById("wallDiv");
 const wall = document.getElementById("wall");
-
+const leftWallDiv = document.getElementById("leftWallDiv");
+const leftWall = document.getElementById("leftWall");
 //bottles
 const bottle1 = document.getElementById("bottle1");
 const bottle2 = document.getElementById("bottle2");
@@ -19,7 +20,14 @@ const broken = document.getElementById("broken");
 const bottles = [bottle1, bottle2, bottle3];
 const bottleText = document.getElementById("bottleText");
 let totalBottles = 0;
-//game variables
+const redBottle1 = document.getElementById("redBottle1");
+const redBottle2 = document.getElementById("redBottle2");
+const redBottle3 = document.getElementById("redBottle3");
+const redBroken = document.getElementById("redBroken");
+const redBottles = [redBottle1, redBottle2, redBottle3];
+const leftBottleText = document.getElementById("leftBottleText");
+let totalRedBottles = 0;
+//game variable
 const mainGame = document.getElementById("mainGame");
 const buttons = document.getElementById("buttons");
 const rollBtn = document.getElementById("rollBtn");

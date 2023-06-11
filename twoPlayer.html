@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="twoPlayer.css"> 
+    <title>Green Bottles Dice Game - 2Player</title>
+</head>
+<body>
+    <div class="welcome" id="welcome">
+        <h2>NJ Codes Proudly Presents...</h2>
+    </div>
+    <div class="title" id="title">
+        <h1 id="titleText">The Green Bottles Dice Game<br>- 2 Player Edition</h1>
+        <div id="splitTitle" class="splitTitle">
+            <h1>The Green Bottles</h1>
+            <h1>Dice Game - 2 Player Edition</h1>
+        </div>
+    </div>
+    <div class="leftWallDiv" id="leftWallDiv">
+        <p id="leftBottleText" class="leftBottleText">0 red bottles standing on the wall. And if 1 red bottle should accidentally fall...</p>
+        <img src="images/wall.PNG" alt="Wall" class="wall" id="wall" width="500px" height="180px">
+        <img src="images/brokenRed.PNG" alt="Broken bottles" class="brokenRed" id="brokenRed" width="400px" height="auto">
+    </div>
+    <div class="wallDiv" id="wallDiv">
+        <p id="bottleText" class="bottleText">0 green bottles standing on the wall. And if 1 green bottle should accidentally fall...</p>
+        <img src="images/wall.PNG" alt="Wall" class="leftWall" id="leftWall" width="500px" height="180px">
+        <img src="images/redBroken.PNG" alt="Broken bottles" class="redBroken" id="redBroken" width="400px" height="auto">
+    </div>
+    <div class="mainGame" id="mainGame">
+        <div class="board" id="board">
+            <div class="dice" id="dice">
+                <img src="images/dice1.gif" alt="1" class="diceImg dice1" id="dice1">
+                <img src="images/dice2.gif" alt="2" class="diceImg dice2" id="dice2">
+                <img src="images/dice3.GIF" alt="3" class="diceImg dice3" id="dice3">
+                <img src="images/dice4.gif" alt="4" class="diceImg dice4" id="dice4">
+                <img src="images/dice5.GIF" alt="5" class="diceImg dice5" id="dice5">
+                <img src="images/dice6.GIF" alt="6" class="diceImg dice6" id="dice6">
+            </div>
+        </div>
+        <div class="buttons" id="buttons">
+            <button value="Roll" class="btn rollBtn" id="rollBtn">Roll Dice</button>
+            <button value="Reset" class="btn resetBtn" id="resetBtn">Reset</button>
+            <button value="Rules" class="btn rulesBtn" id="rulesBtn">How To Play</button>
+                <div class="rules" id="rules">
+                    <h4 class="rulesTitle">How to play:</h4>
+                    <button value="X" id="xBtn" class="xBtn">X</button>
+                    <ul>
+                        <li>Click the button to roll the dice</li>
+                        <li>Your score will be represented by how<br>many green bottles are sitting on the wall</li>
+                        <li>Keep clicking, rolling, and stacking those bottles</li>
+                        <li>If you roll a 1, 1 green bottle will fall, causing<br> all the others to smash and you will have <br>to start again</li>
+                        <li>You can also hit the 'Reset' button at any time<br>to start again</li>
+                        <li>Once you have reached 20 bottles...<br><center>...YOU'RE A WINNER, BABY!</center></li>
+                    </ul>
+                </div>
+        </div>
+        <div class="overlay" id="winnerOverlay">
+            <h1>CONDRAGULATIONS!</h1> 
+            <h1>YOU ARE THE WINNER OF</h1>
+            <h1 id="winnerTitle">THE GREEN BOTTLES DICE GAME</h1>
+            <button value="Play Again?" class="playAgainBtn" id="playAgainBtn">Play Again?</button>
+        </div>
+    </div>
+    <footer class="footer" id="footer">
+        <p class="playing" id="playing">You've been playing The Green Bottle Dice Game for one player by NJCodes.</p>
+        <p class="portfolio" id="portfolio">Check out the rest of my portfolio at <a href="codes.njtd.xyz" class="github">codes.njtd.xyz</a></p>
+        <p class="portfolio" id="portfolio">You can also see what I'm currently up to on <a href="https://github.com/NathanJohnNJ" class="github">github</a></p>
+        <p class="thanks" id="thanks">Thanks for playing! See you again soon.</p>
+    </footer> 
+    <script src="twoPlayer.js"></script>
+    <!-- <script src="test.js"></script> -->
+</body>
+</html>

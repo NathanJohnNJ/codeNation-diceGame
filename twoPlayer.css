@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Righteous&family=Source+Code+Pro:wght@300&display=swap');
+
+body{
+    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+}
+
+/*------Title-------*/
+#titleText{
+    display: none;
+}
+.welcome{
+    color: rgb(18, 97, 18);
+    margin-top: 35%;
+    transition: margin-top 5s;
+    font-size: 25px;
+    transition: font-size 5s;
+    display: block;
+    font-family: 'Righteous', cursive;
+
+}
+.title{
+    font-size: 20px;
+    transition: font-size 5s;
+    color: rgb(57, 123, 57);
+    text-shadow: 0, 0, 50%, black;
+    width: 100%;
+    font-family: 'Luckiest Guy', cursive;
+}
+/*------TITLE END-------*/
+/*------COUNTER/BOTTLES-------*/
+.bottleText{
+    position: absolute;
+    display: flex;
+    margin-top: 100px;
+    z-index: 90;
+    font-weight: bolder;
+    color: white;
+    max-width: 450px;
+}
+.leftBottleText{
+    position: absolute;
+    display: flex;
+    margin-top: 100px;
+    z-index: 90;
+    font-weight: bolder;
+    color: white;
+    max-width: 450px;
+}
+.broken{
+    display: none;
+    position: absolute;
+}
+.redBroken{
+    display: none;
+    position: absolute;
+}
+.wallDiv{
+    /* display: none; */
+    margin-left: 500px;
+    margin-top: -70px;
+    justify-content: center;
+    /* z-index: 80; */
+    display: inline-block;
+}
+.leftWallDiv{
+
+    /* display: none; */
+    display: block;
+    margin-left: 5px;
+    margin-top: -70px;
+    justify-content: inline-flex;
+    z-index: 80;
+}
+/*------COUNTER/BOTTLES END-------*/
+/*------BUTTONS-------*/
+.btn{
+    color:rgb(57, 123, 57);
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 5%;
+    
+    font-family: 'Righteous', cursive;
+}
+.buttons{
+    display: none;  
+    margin-top: -45px;
+}
+.rules{
+    display: none;
+    margin-top: 120px;
+    margin-left: 75px;
+}
+.xBtn{
+    display: block;
+    border: none;
+    font-weight: bolder;
+    right: 0;
+    position: absolute;
+    margin-top: -15px;
+}
+ul{
+    margin-top: -5px;
+    text-align: left;
+}
+ /*------BUTTONS END-------*/
+ /*------DICE-------*/
+.board{
+    background-color: white;
+    height: 250px;
+    width: 400px;
+    border-radius: 35%;
+    border-color: black;
+    border-style: groove;
+    display: none;
+    margin-top: -150px;
+}
+.dice{
+    margin-left:90px;
+    
+    display: none;
+    z-index: 95;
+}
+.dice1{
+    display: none;
+    margin-top:65px;
+}
+.dice2{
+    display: none;
+    margin-top:65px;
+}
+.dice3{
+    display: none;
+    margin-top:65px;
+}
+.dice4{
+    display: none;
+    margin-top:65px;
+}
+.dice5{
+    display: none;
+    margin-top:65px;
+}
+.dice6{
+    display: none;
+    margin-top:65px;
+}
+.diceImg{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+}
+ /*------DICE END-------*/
+ /*------WINNER-------*/
+.overlay{
+    display: none;
+    background-color: rgb(57, 123, 57);
+    color: white;
+    z-index: 99;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+.overlay h1{
+    font-family: 'Righteous', cursive;
+}
+#winnerTitle{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 48px;
+}
+.playAgainBtn{
+    color:rgb(57, 123, 57);
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-family: 'Righteous', cursive;
+}
+ /*------WINNER END-------*/
+/*------FOOTER-------*/
+footer{
+    display: none;
+    visibility: hidden;
+    margin-top: 18%;
+    transition: margin-top 5s;
+    z-index: 99;
+    background-color: azure;
+    position:sticky;
+}
+.github{
+    text-decoration: none;
+    color: rgb(57, 123, 57);
+}
+footer a:hover{
+    color: black;
+}
